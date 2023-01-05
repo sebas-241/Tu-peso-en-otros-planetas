@@ -18,17 +18,31 @@
             a{
                 color: aqua;
             }
-            h2{
+            .resultado{
                 color: aqua;
             }
             .error{
                 color: red;
+            }
+            .tierra{
+                margin: 50px;
+                margin-right: 1200px;
             }
         </style>
     </head>
     <body>
         <h1>Descubre cuanto pesas en <strong>todos los planetas</strong> de nuestro sistema solar.</h1>
         <p>Nota: Los datos proporcionados no son de nuestra pertenecia, sino de esta <a target="_blank" href="https://www.significados.com/planetas-del-sistema-solar/">web</a></p>
+        <h2>Datos sobre los planetas</h2>
+        <div>
+            <div class="tierra">
+                <h1>TIERRA / GRAVEDAD: 9.8 m/s²</h1>
+                <p>La Tierra es el tercer planeta orbitando alrededor del Sol. Su composición terrestre, la presencia de agua y una atmósfera compuesta por oxígeno, nitrógeno y vapor de agua (entre otros componentes). Otra característica del planeta Tierra es la existencia de una capa de ozono que protege a todas las formas de vida de la radiación solar. Esto, y la presencia de grandes masas de agua en estado líquido que conforman un 70% de la composición del planeta, hacen de la Tierra el único planeta habitable, hasta ahora. Por otra parte, la Tierra cuenta con su propio satélite natural, la Luna.</p>
+                <img src="https://s1.significados.com/foto/planetas-del-sistema-solar-tierra-34.jpg?auto_optimize=low&width=655" width="500px">
+            </div>
+            
+        </div>
+
         <script>
             peso_user = parseInt(prompt("Ingrese su peso actual: "));
             planeta_user = parseInt(prompt("Elige el numero del planeta a pesarte: \n 1. Mercurio \n 2. Venus \n 3. Marte \n 4. Jupiter \n 5. Saturno \n 6. Urano \n 7. Neptuno"))
@@ -72,10 +86,10 @@
             }
             else{
                 peso_final_user = "<a class =error>0</a>";
-                planeta = "<a class =error>None</a>";
+                planeta = "<a class = error>None</a>";
             }
 
-            document.write("<h2>Tu peso en " + planeta + " es de: " + peso_final_user + " Kilos.</h2>");
+            document.write("<h2 class = resultado>Tu peso en " + planeta + " es de: " + peso_final_user + " Kilos.</h2>");
         </script>
     </body>
 </html>
