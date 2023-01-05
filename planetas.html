@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tu peso en otros planetas del sistema solar</title>
+        <style> @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap'); </style>
+        <style>
+            body {
+                background-color: black;
+                color: white;
+                font-family: 'Chakra Petch', sans-serif;
+                text-align: center;
+            }
+
+            strong {
+                color: black;
+                background-color: white;
+            }
+            a{
+                color: aqua;
+            }
+            h2{
+                color: aqua;
+            }
+            .error{
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Descubre cuanto pesas en <strong>todos los planetas</strong> de nuestro sistema solar.</h1>
+        <p>Nota: Los datos proporcionados no son de nuestra pertenecia, sino de esta <a target="_blank" href="https://www.significados.com/planetas-del-sistema-solar/">web</a></p>
+        <script>
+            peso_user = parseInt(prompt("Ingrese su peso actual: "));
+            planeta_user = parseInt(prompt("Elige el numero del planeta a pesarte: \n 1. Mercurio \n 2. Venus \n 3. Marte \n 4. Jupiter \n 5. Saturno \n 6. Urano \n 7. Neptuno"))
+            var tierra = 9.8;
+            var mercurio = 3.7;
+            var venus = 8.87;
+            var marte = 3.7;
+            var jupiter = 24.79;
+            var saturno = 10.44;
+            var urano = 8.69;
+            var neptuno = 11.15;
+            var peso_final_user;
+            var planeta;
+            if(planeta_user == 1){
+                peso_final_user = parseInt(peso_user * mercurio / tierra);
+                planeta = "Mercurio";
+            }
+            else if(planeta_user == 2){
+                peso_final_user = parseInt(peso_user * venus / tierra);
+                planeta = "Venus";
+            }
+            else if(planeta_user == 3){
+                peso_final_user = parseInt(peso_user * marte / tierra);
+                planeta = "Marte";
+            }
+            else if(planeta_user == 4){
+                peso_final_user = parseInt(peso_user * jupiter / tierra);
+                planeta = "Jupiter";
+            }
+            else if(planeta_user == 5){
+                peso_final_user = parseInt(peso_user * saturno / tierra);
+                planeta = "Saturno";
+            }
+            else if(planeta_user == 6){
+                peso_final_user = parseInt(peso_user * urano / tierra);
+                planeta = "Urano";
+            }
+            else if(planeta_user == 7){
+                peso_final_user = parseInt(peso_user * neptuno / tierra);
+                planeta = "Neptuno";
+            }
+            else{
+                peso_final_user = "<a class =error>0</a>";
+                planeta = "<a class =error>None</a>";
+            }
+
+            document.write("<h2>Tu peso en " + planeta + " es de: " + peso_final_user + " Kilos.</h2>");
+        </script>
+    </body>
+</html>
